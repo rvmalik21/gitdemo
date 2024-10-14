@@ -31,3 +31,8 @@ def setup(request):
     #return driver  ----- This line and yield line can not be used together
     yield
     driver.close()
+
+@pytest.fixture(scope="class")
+def setupLCCM(self):
+    browser_namelccm
+

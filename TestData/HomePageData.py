@@ -1,12 +1,16 @@
 import openpyxl
 class HomePageData:
     #test_HomePage_Data = [{"firstname":"Ravi ","secondname":"Malik","gender":"Male","dob":"14/11/2222"}, {"firstname":"Pooja ","secondname":"Malik","gender":"Female","dob":"31/12/3333"},{"firstname":"Sumit","secondname":"Sharma","gender":"Male","dob":"25/05/1111"}]
-    @staticmethod
+    @staticmethod # A static method is a method that belongs to a class but does not have access
+    # to the class's or instance's state. Unlike instance methods (which use self to access instance
+    # variables) and class methods (which use cls to access class variables), static methods do not
+    # operate on specific objects or data within the class. They behave like regular functions but are
+    # grouped inside the class to show that they are related conceptually.
     def getTestData(test_case_data):
         book = openpyxl.load_workbook("C:\\Users\\ravi.malik\\Documents\\Book1.xlsx")
         sheet = book.active
         #--------------------------- This code is written by Ravi to Iterate all the row of Excel------------------------------
-        result = []
+        result = [] # This is empty list to store the set of dictionaries for respective rows in side for loop
         for i in range(2, sheet.max_row + 1):  # Start from the second row to skip headers
             # Initialize a new dictionary for each row
             row_dict = {}

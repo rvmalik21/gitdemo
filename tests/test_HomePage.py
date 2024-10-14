@@ -16,7 +16,7 @@ class TestHomepage(BaseClass):
         log = self.getLogger
         homepage = HomePage(self.driver)
         #homepage.getName().send_keys("Ravi")
-        log.info("FirsName will be here" + getterData["firstname"])
+        log.info("FirsName will be here" + (getterData["firstname"]))
         homepage.getName().send_keys(getterData["firstname"])
         #homepage.getEmail().send_keys("ravtest91@gmail.com")
         homepage.getEmail().send_keys(getterData["secondname"])
