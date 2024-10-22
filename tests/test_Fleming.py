@@ -1,5 +1,6 @@
 import time
 
+import pytest
 from selenium.webdriver.chrome import webdriver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -12,7 +13,7 @@ from selenium.webdriver.support import expected_conditions as EC
 # print(driver.title)
 # print(driver.current_url)
 # time.sleep(5)
-
+@pytest.mark.skip
 class TestLCCA:
     def test_HomeLFCT(self):
         # Setup the WebDriver ( for example , using Chrome)

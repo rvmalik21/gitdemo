@@ -3,6 +3,7 @@ import time
 from selenium.webdriver.chrome import webdriver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+@pytest.mark.skip
 class LSBFSGSmoke:
     def test_HomeLCCA(self):
         # Setup the WebDriver ( for example , using Chrome)

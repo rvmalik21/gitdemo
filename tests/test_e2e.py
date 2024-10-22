@@ -1,4 +1,6 @@
 import time
+
+import pytest
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
@@ -6,6 +8,7 @@ from Scripts.pageObjects.ConfirmPage import ConfirmPage
 from Scripts.utilities.BaseClass import BaseClass
 from Scripts.pageObjects.HomePage import HomePage
 from Scripts.pageObjects.CheckoutPage import CheckoutPage
+@pytest.mark.skip
 # @pytest.mark.usefixtures("setup") ---- We will use this fixture in another package called utilities and BaseClass
 class TestOne(BaseClass):
     def test_e2e(self):

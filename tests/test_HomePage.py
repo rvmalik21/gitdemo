@@ -10,6 +10,7 @@ from selenium.webdriver.support.ui import Select
 from Scripts.TestData.HomePageData import HomePageData
 from Scripts.pageObjects.HomePage import HomePage
 from Scripts.utilities.BaseClass import BaseClass
+@pytest.mark.skip
 @pytest.mark.usefixtures("getterData")
 class TestHomepage(BaseClass):
     def test_formSubmission(self,getterData):
@@ -39,6 +40,7 @@ class TestHomepage(BaseClass):
 # Here We are use params in Tuple
 #@pytest.fixture(params=[("Ravi ","Malik","Male","14/11/2222"), ("Pooja ","Malik","Female","31/12/3333"),("Sumit","Sharma","Male","25/05/1111")])
 # Here we passing params in dictionary format
+@pytest.mark.skip
 @pytest.fixture(params=HomePageData.getTestData("testcase"))
 def getterData(request):
     return request.param

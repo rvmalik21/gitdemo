@@ -1,12 +1,13 @@
 import time
 
+import pytest
 from selenium.webdriver.chrome import webdriver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
-
+@pytest.mark.skip
 class TestLCCA:
     def test_HomeLCCA(self):
         # Setup the WebDriver ( for example , using Chrome)

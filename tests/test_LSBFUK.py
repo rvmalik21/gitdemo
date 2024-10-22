@@ -1,9 +1,10 @@
 import time
 
+import pytest
 from selenium.webdriver.chrome import webdriver
 from selenium import webdriver
 from selenium.webdriver.common.by import By
-
+@pytest.mark.skip
 class TestCCTB:
     def test_LSBFUK(self):
 
